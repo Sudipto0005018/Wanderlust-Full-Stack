@@ -14,7 +14,7 @@ export const Admin = () => {
         setLoading(true);
         let token = localStorage.getItem('token');
 
-        let response = await axios.get('http://localhost:8000/admin/getalltour', {
+        let response = await axios.get('https://wanderlust-full-stack-eta.vercel.app/admin/getalltour', {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`

@@ -13,7 +13,7 @@ const Order = () => {
         setLoading(true);
         let token = localStorage.getItem('usertoken');
 
-        let response = await axios.get(`http://localhost:8000/user/getorders`, {
+        let response = await axios.get(`https://wanderlust-full-stack-eta.vercel.app/user/getorders`, {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`

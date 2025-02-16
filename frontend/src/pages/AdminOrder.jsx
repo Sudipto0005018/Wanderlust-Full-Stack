@@ -13,7 +13,7 @@ const AdminOrder = () => {
         let token = localStorage.getItem('token');
         console.log("token ",token)
 
-        let response = await axios.get(`http://localhost:8000/admin/getallorders`, {
+        let response = await axios.get(`https://wanderlust-full-stack-eta.vercel.app/admin/getallorders`, {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`

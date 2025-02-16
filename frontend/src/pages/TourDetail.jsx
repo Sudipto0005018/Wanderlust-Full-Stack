@@ -21,7 +21,7 @@ export const TourDetail = () => {
 
   const getTour = async () => {
     setLoading(true);
-    const response = await axios.get(`http://localhost:8000/user/getour/${id}`);
+    const response = await axios.get(`https://wanderlust-full-stack-eta.vercel.app/user/getour/${id}`);
     setTour(response.data.tour);
     setLoading(false);
   };
@@ -29,7 +29,7 @@ export const TourDetail = () => {
   const getCart = async () => {
     const token = localStorage.getItem("usertoken");
     if (token) {
-      const response = await axios.get("http://localhost:8000/user/getcart", {
+      const response = await axios.get("https://wanderlust-full-stack-eta.vercel.app/user/getcart", {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -53,7 +53,7 @@ export const TourDetail = () => {
         navigate("/login");
       } else {
         const response = await axios.post(
-          "http://localhost:8000/user/postcart",
+          "https://wanderlust-full-stack-eta.vercel.app/user/postcart",
           {
             name: tour.name,
             image: tour.image1,

@@ -15,7 +15,7 @@ function AltHeadbar({ logoutHandler }) {
   const getuser = async () => {
     let token = localStorage.getItem("usertoken");
 
-    const response = await axios.get("http://localhost:8000/user/getuser", {
+    const response = await axios.get("https://wanderlust-full-stack-eta.vercel.app/user/getuser", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -29,7 +29,7 @@ function AltHeadbar({ logoutHandler }) {
   const getCart = async () => {
     let token = localStorage.getItem("usertoken");
 
-    const response = await axios.get("http://localhost:8000/user/getcart", {
+    const response = await axios.get("https://wanderlust-full-stack-eta.vercel.app/user/getcart", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,

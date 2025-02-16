@@ -16,7 +16,7 @@ export const Admintours = ({ tour, getours }) => {
     const deletehandler = async () => {
         let token = localStorage.getItem('token');
 
-        const response = await axios.delete(`http://localhost:8000/admin/deletetour/${tour._id}`, {
+        const response = await axios.delete(`https://wanderlust-full-stack-eta.vercel.app/admin/deletetour/${tour._id}`, {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`,

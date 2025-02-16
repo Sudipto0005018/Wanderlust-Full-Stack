@@ -14,7 +14,7 @@ const Cartitem = ({ item, handleItemDelete, handleTotalCost }) => {
     async function handleBuy() {
         let token = localStorage.getItem('usertoken')
 
-        const response = await axios.delete('http://localhost:8000/user/deletecart', {
+        const response = await axios.delete('https://wanderlust-full-stack-eta.vercel.app/user/deletecart', {
             data: { cartid: item._id },
             headers: {
                 'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const Cartitem = ({ item, handleItemDelete, handleTotalCost }) => {
     const updatecart = async () => {
         let token = localStorage.getItem('usertoken');
 
-        const response = await axios.put('http://localhost:8000/user/updatecart', {
+        const response = await axios.put('https://wanderlust-full-stack-eta.vercel.app/user/updatecart', {
             person, cartid: item._id, total
         },
             {
@@ -63,7 +63,7 @@ const Cartitem = ({ item, handleItemDelete, handleTotalCost }) => {
     async function cancelhandler() {
         let token = localStorage.getItem('usertoken');
 
-        const response = await axios.delete('http://localhost:8000/user/deletecart', {
+        const response = await axios.delete('https://wanderlust-full-stack-eta.vercel.app/user/deletecart', {
             data: {
                 cartid: item._id
             },

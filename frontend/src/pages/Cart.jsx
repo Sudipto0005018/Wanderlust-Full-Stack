@@ -38,7 +38,7 @@ export const Cart = () => {
     const handleClearCart = async () => {
         let token = localStorage.getItem('usertoken');
 
-        const response = await axios.delete('http://localhost:8000/user/deleteallcart', {
+        const response = await axios.delete('https://wanderlust-full-stack-eta.vercel.app/user/deleteallcart', {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`
@@ -64,7 +64,7 @@ export const Cart = () => {
     const getcart = async () => {
         let token = localStorage.getItem('usertoken');
 
-        const response = await axios.get(`http://localhost:8000/user/getcart`, {
+        const response = await axios.get(`https://wanderlust-full-stack-eta.vercel.app/user/getcart`, {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`

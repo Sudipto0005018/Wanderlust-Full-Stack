@@ -32,7 +32,7 @@ export const AdminLogin = () => {
 
     if (email && password) {
       let adminlogin = await axios.post(
-        "http://localhost:8000/admin/adminlogin",
+        "https://wanderlust-full-stack-eta.vercel.app/admin/adminlogin",
         {
           email: email,
           password: password,

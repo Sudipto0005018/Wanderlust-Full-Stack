@@ -11,7 +11,7 @@ export const Tours = () => {
   {
     setLoading(true);
 
-    const response = await axios.get("http://localhost:8000/user/getalltour");
+    const response = await axios.get("https://wanderlust-full-stack-eta.vercel.app/user/getalltour");
     console.log("response : ", response.data);
     
     setTours(response.data.alltour);

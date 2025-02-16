@@ -28,7 +28,7 @@ export const Booking = () => {
             let token = localStorage.getItem('usertoken');
             console.log(item._id);
 
-            const response = await axios.post('http://localhost:8000/user/tourorder', {
+            const response = await axios.post('https://wanderlust-full-stack-eta.vercel.app/user/tourorder', {
                 username: name, email, tourname: item.name, person: item.person, price: item.price,
                 total: item.total, tour: item._id, startdate: item.startdate, image: item.image
             },
@@ -46,7 +46,7 @@ export const Booking = () => {
     const getuser = async () => {
         let token = localStorage.getItem('usertoken');
 
-        const response = await axios.get('http://localhost:8000/user/getuser', {
+        const response = await axios.get('https://wanderlust-full-stack-eta.vercel.app/user/getuser', {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${token}`

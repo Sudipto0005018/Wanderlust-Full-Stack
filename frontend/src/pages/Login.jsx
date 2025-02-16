@@ -32,7 +32,7 @@ const Login = () => {
     event.preventDefault();
 
     if (email && password) {
-      let userlogin = await axios.post("http://localhost:8000/user/userlogin", {
+      let userlogin = await axios.post("https://wanderlust-full-stack-eta.vercel.app/user/userlogin", {
         email: email,
         password: password,
       });
