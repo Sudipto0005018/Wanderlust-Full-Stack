@@ -8,7 +8,7 @@ require('./dbConnect');
 
 const cors = require('cors');
 app.use(cors({
-    origin: ['https://wanderlust-frontend-git-main-sudipto0005018s-projects.vercel.app/'],
+    origin: ['https://wanderlust-frontend-nine.vercel.app'],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
   }));
