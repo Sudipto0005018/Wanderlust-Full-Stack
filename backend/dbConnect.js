@@ -11,20 +11,19 @@
 
 // module.exports = dbconnect;
 
-
-
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 dotenv.config();
 
 const MONGODB_URL = process.env.MONGODB_CONNECT_URL;
 
-mongoose.connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Database successfully connected');
-    })
-    .catch((err) => {
-        console.error('Database connection error:', err);
-    });
+mongoose
+  .connect(MONGODB_URL)
+  .then(() => {
+    console.log("Database successfully connected");
+  })
+  .catch((err) => {
+    console.error("Database connection error:", err);
+  });
 
 module.exports = mongoose;
